@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Youthenize</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Add Tailwind CSS CDN -->
+     <script src="https://cdn.tailwindcss.com"></script>
+ </head>
+    
+<style>
+    .box{
+        background-color: beige;
+        height: 200px;
+        width: 200px;
+
+    }
+    body {
+        background-color:#2874e5 ;
+        
+    }
+    [v-cloak]{
+        display: none;
+    }
+</style>
+<body>
+   
+    <div id = "app" v-cloak>
+        <h1> {{ greeting }}</h1>
+        <input @keyup.enter="greet" v-model = "greeting" />
+        <div v-if="isVisible" class="box"></div>
+        <button @click="toggleBox = !isVisible">Submit application</button>
+    </div>
+    <script>let app = 
+        Vue.createApp({
+            data: function() {
+                return{
+                    greeting : "Youthenize",
+                    isVisible: false
+                }
+            },
+            methods: {
+                toggleBox(){
+                    
+                },
+                greet(){
+                    console.log(this.greeting)
+                }
+                
+            }
+        })
+        app.mount("#app")
+    </script>
+    
+</body>
+</html>

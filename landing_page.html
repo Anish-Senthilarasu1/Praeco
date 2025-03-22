@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youthenize</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<style>
+    
+    .navbar {
+    width: 50%; /* Cuts the navbar width in half */
+    overflow: hidden; /* Hides any overflowing content */
+}
+    
+    .exo-2 { font-family: 'Exo 2', sans-serif; }
+
+    
+    .source-serif {
+  font-family: "Source Serif 4", serif;
+
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #d1c9f5;
+}
+</style>
+
+
+<body class="bg-[#d1c9f5] min-h-screen">
+    
+
+    <!-- Navbar -->
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-6 py-3">
+        <h1 class="source-serif text-5xl font-semibold text-left">PRAECO</h1>
+    </div>
+
+    <!-- Category Filter -->
+
+    <div class="sticky top-[60px] z-20 flex justify-center gap-4 bg-[#D3CFE2] rounded-full px-4 py-2 shadow-lg">
+        <button class="category-btn active px-3 py-1 rounded-full bg-white text-black font-semibold" data-page="recent.html">Recent</button>
+        <button class="category-btn px-3 py-1 rounded-full text-black" data-page="opinion.html">Opinion</button>
+        <button class="category-btn px-3 py-1 rounded-full text-black" data-page="news.html">News</button>
+        <button class="category-btn px-3 py-1 rounded-full text-black" data-page="entertainment.html">Entertainment</button>
+        <button class="category-btn px-3 py-1 rounded-full text-black" data-page="lifestyle.html">Lifestyle</button>
+    </div>
+    
+
+    <div class="grid grid-cols-5 grid-rows-5 gap-4 h-[72vh] mt-3">
+        
+        <div class="relative rounded-lg shadow-xl col-span-2 row-span-3 ml-10 h-full w-[80vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="selfcare.webp" alt="Self-care products">
+            
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-3 p-4">
+                <!-- Moves text closer to the middle -->
+                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
+                    Me First?<br> 
+                    How “Self Care” is Selfish
+                </p>
+
+        
+                <!-- Author near the bottom -->
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Audrey Seigman </p>
+            </div>   
+           
+        </div>
+        
+        
+        <a href="syria_story.html">
+            <div class="relative rounded-lg shadow-xl row-span-3 col-start-3 ml-20 w-[44vh] h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+                <img class="block h-full w-full object-cover rounded-lg opacity-40" src="syrian_image.png" alt="Syria conflict image">
+                
+                <div class="absolute inset-0 flex flex-col justify-center h-full ml-3 p-4">
+                    <!-- Title at the top with margin-bottom auto to push it up -->
+                    <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
+                        The Dirty War in Syria:<br>
+                        A Youth's Story
+                    </p>
+            
+                    <!-- Author at the bottom -->
+                    <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Yaseen Aswad</p>
+                </div>
+            </div>
+        </a>
+        
+        </a>    
+        <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 ml-10 h-[35vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="people_chatting.jpg" alt="People Chatting">
+        
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-3 p-4">
+                <!-- Title at the top with margin-bottom auto to push it up -->
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    Encouraging Deep Conversations
+                </p>
+        
+                <!-- Author at the bottom -->
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Maya Jabbar</p>
+            </div>
+        </div>
+        
+        <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 ml-2 w-[47vh] h-[35vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="depressionlol.png" alt="Depressed Praeco">
+        
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-3 p-4">
+                <!-- Title at the top with margin-bottom auto to push it up -->
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    Why are we all depressed?<br>
+                </p>
+        
+                <!-- Author at the bottom -->
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Yaseen Aswad</p>
+            </div>
+        </div>
+        
+        <div class="relative rounded-lg shadow-xl col-span-2 row-span-2 row-start-4 ml-20 h-[35vh] w-[44vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="united_health.png" alt="United Healthcare">
+        
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-3 p-4">
+                <!-- Title at the top with margin-bottom auto to push it up -->
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    The United Healthcare Case:<br> Patients & Profit
+                </p>
+        
+                <!-- Author at the bottom -->
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Elisa Eheimua</p>
+            </div>
+        </div>
+
+    
+    <!-- For You component - right-aligned -->
+<!-- Wrapper Div (Right-Aligned Section) -->
+<div class="absolute top-[131px] right-4 w-[300px] p-6 shadow-lg" style="background-color:#D3CFE2;">
+    <!-- Dropdown Button -->
+    <button id="dropdownButton" class="text-center text-2xl font-semibold text-black w-full">
+        For You ▼
+    </button>
+
+    <!-- Dropdown Menu (Initially Hidden & Positioned Absolutely) -->
+    <div id="dropdownMenu"
+        class="absolute right-0 mt-2 w-full bg-white rounded-lg shadow-lg p-2 opacity-0 scale-95 transition-all duration-300 ease-in-out transform hidden">
+        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">Popular</button>
+        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">Editor Picks</button>
+    </div>
+
+    <!-- Content Boxes -->
+    <div class="space-y-4 mt-6">
+        <div class="bg-gray-400 rounded-lg h-32"></div>
+        <div class="bg-gray-400 rounded-lg h-32"></div>
+        <div class="bg-gray-400 rounded-lg h-32"></div>
+    </div>
+</div>
+
+
+
+  
+
+    <script>
+        // Select all category buttons
+        const buttons = document.querySelectorAll('.category-btn');
+    
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                buttons.forEach(btn => btn.classList.remove('bg-white', 'font-semibold'));
+    
+                // Add active class to the clicked button
+                this.classList.add('bg-white', 'font-semibold');
+    
+                // Redirect to the page specified in data-page attribute
+                const page = this.getAttribute('data-page');
+                window.location.href = page;
+            });
+        });
+    </script>
+
+
+<!-- Wrapper Div (Right-Aligned Section) -->
+
+<!-- JavaScript to Toggle Dropdown with Smooth Animation -->
+<script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownButton.addEventListener("click", function () {
+        if (dropdownMenu.classList.contains("hidden")) {
+            dropdownMenu.classList.remove("hidden");
+            setTimeout(() => {
+                dropdownMenu.classList.remove("opacity-0", "scale-95");
+                dropdownMenu.classList.add("opacity-100", "scale-100");
+            }, 10);
+        } else {
+            dropdownMenu.classList.remove("opacity-100", "scale-100");
+            dropdownMenu.classList.add("opacity-0", "scale-95");
+            setTimeout(() => {
+                dropdownMenu.classList.add("hidden");
+            }, 300); // Matches the animation duration
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("opacity-100", "scale-100");
+            dropdownMenu.classList.add("opacity-0", "scale-95");
+            setTimeout(() => {
+                dropdownMenu.classList.add("hidden");
+            }, 300);
+        }
+    });
+</script>
+
+
+
+
+</body>
+</html>

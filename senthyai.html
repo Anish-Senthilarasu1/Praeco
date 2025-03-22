@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senti.Ai</title>
+
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+/* Typing Effect */
+.typing-wrapper {
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.typing-container {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+/* Fix cursor alignment */
+.typing-container::after {
+    content: '|';
+    display: inline;
+    font-weight: bold;
+    color: black;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+    </style>
+</head>
+
+<body class="bg-gradient-to-t from-[#FFFFFF] to-[#6D00B0] h-screen">
+    <div data-scroll-container>
+
+        <!-- Hero Section -->
+        <div class="flex flex-col items-center justify-center h-screen gap-y-8 translate-y-[10px]">
+            <h1 class="text-8xl text-center font-bold text-black">Sentiment Analysis</h1>
+            <h1 class="text-8xl text-center font-bold text-white">Redefined</h1>
+
+            <h1 class="text-2xl text-center font-semibold text-black">Turning news into decisions</h1>
+
+            <h1 class="text-2xl text-center font-semibold text-black">
+                <span class="typing-wrapper text-6xl font-bold">For&nbsp;<span class="typing-container"></span></span>
+            </h1>
+            
+        <a href ="chat.html">
+            <button type="button" class="text-gray-900 font-bold bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-2.5">
+                Try Senthii
+            </button>
+        </a>
+        </div>
+
+        <!-- New White Section -->
+        <div class="h-screen bg-white flex items-start justify-center pl-10 pt-10">
+            <h1 class="text-7xl font-bold text-black">Why Senthii?</h1>
+        </div>
+        
+    </div>
+
+    <script>
+        // Typing Effect
+        const phrases = ["Investors", "VC", "CRM", "Marketers"];
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const erasingSpeed = 70;
+        const delayBetween = 1000;
+        const textContainer = document.querySelector(".typing-container");
+
+        function type() {
+            const currentText = phrases[index];
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            textContainer.textContent = " " + currentText.substring(0, charIndex);
+
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => (isDeleting = true), delayBetween);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % phrases.length;
+            }
+
+            setTimeout(type, isDeleting ? erasingSpeed : typingSpeed);
+        }
+
+        type();
+
+        // Locomotive Scroll Initialization
+        document.addEventListener("DOMContentLoaded", function () {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector("[data-scroll-container]"),
+                smooth: true
+            });
+        });
+    </script>
+</body>
+</html>

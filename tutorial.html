@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+           <!-- Add Tailwind CSS CDN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body class="font - [Poppins] bg-gradient-to-t from-[#99a0b4] to-[#717ca2] h-screen">
+    
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-full px-8">
+            <div>
+                <img class='w-16' src="">
+            </div> 
+            <div>
+                <ul class="flex items-center gap-[4vw]">
+                    <li><a class="hover:text-gray-500" href="#">Opinion</a></li>
+                    <li><a class="hover:text-gray-500" href="#">News</a></li>
+                    <li><a class="hover:text-gray-500" href="#">Interview</a></li>
+                    <li><a class="hover:text-gray-500" href="#">Newspaper</a></li>
+                </ul>
+            </div>
+            <!-- Move Youthenize to a separate div and align right -->
+            <div class="ml-auto">
+                <h1 class="text-6xl font-bold text-right">Youthenize</h1>
+            </div>
+
+            
+        </nav>
+        
+    </header>
+    <div class="flex justify-center">
+        <div class="grid grid-cols-3 gap-4 p-4">
+        <!-- Main story spanning 2 columns -->
+            <div class="col-span-2 p-4 border rounded-lg">
+            <h2 class="text-5xl font-bold mb-4 ">Newspaper</h2>
+
+            <img src="https://www.shutterstock.com/image-photo/beautiful-motion-blur-people-walking-600nw-2316568279.jpg" class="w-full h-auto rounded-lg mt-2">
+            </div>
+
+            <div class = "row-span-3 gap-4 p-4 border rounded-lg">
+                <h2 class="text-3xl font-bold mb-4 ">Opinion</h2>
+                <img src ="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2025-01/250131-trump-mb-1313-bc02a1.jpg">
+                
+            </div>
+
+      
+    <script>
+        let app = Vue.createApp({
+            data:function(){
+                
+            }
+        })
+    </script>
+    
+</body>
+</html>
