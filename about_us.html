@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+        .exo-2 { 
+            font-family: 'Exo 2', sans-serif; 
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #d1c9f5;
+        }
+    </style>
+</head>
+<body class="bg-[#d1c9f5] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-6 py-3 flex justify-between items-center">
+        <a href="landing_page.html" class="source-serif text-5xl font-semibold text-left">PRAECO</a>
+        <div class="flex gap-6">
+            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
+            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="source-serif text-5xl font-bold mb-6">About Us</h1>
+            <p class="text-xl text-gray-700 mb-8">Empowering voices, shaping perspectives, and fostering meaningful conversations.</p>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="bg-white rounded-2xl shadow-xl mx-6 mb-12 p-8 max-w-4xl mx-auto">
+        <div class="flex items-center mb-6">
+            <div class="w-12 h-12 rounded-full bg-[#8B7FD4] flex items-center justify-center mr-4">
+                <span class="text-white text-2xl">🎯</span>
+            </div>
+            <h2 class="source-serif text-3xl font-bold">Our Mission</h2>
+        </div>
+        <p class="text-gray-700 text-lg leading-relaxed">
+            At PRAECO, we're dedicated to amplifying diverse voices and perspectives. Our platform serves as a bridge between ideas and understanding, fostering meaningful dialogue on the issues that matter most to our generation.
+        </p>
+    </div>
+
+    <!-- Values Grid -->
+
+
+    <!-- Team Section -->
+    <div class="max-w-7xl mx-auto px-6 mb-16">
+        <h2 class="source-serif text-4xl font-bold text-center mb-4">Our Team</h2>
+        <p class="text-xl text-gray-600 text-center mb-12">Meet the passionate individuals behind PRAECO</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+            <!-- Team Member 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="audrey.JPG" class="w-full h-96 object-cover" alt="Audrey Seigman">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Audrey Seigman</h3>
+                        <p class="text-white/90">Co-Editor-in-Chief</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Hey! My name is Audrey Seigman, and I am currently a Sophmore at Georgetown High School. I am inspired to write by my friends and the art they create. I truly enjoy being able to observe my peer’s styles and recognize what makes their work special in order to build upon my own skills. Besides being the co-editor in chief of Praeco, I also participate in programs such as Teen Court, GHS Student Council, ConnectMe tutoring, Serteens, and volunteering.
+
+                        .</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="yaseen.JPG" class="w-full h-96 object-cover" alt="Yaseen Aswad">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Yaseen Aswad</h3>
+                        <p class="text-white/90">Co-Editor-in-Chief</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Hey, my name is Yaseen! I am a sophomore who attends Meridian World School. I get most of my inspiration from nature, travelling to different places and getting to learn about the world around about all of us! Outside of school I participate in Teen Court, the SICMUN secretariat, as well as differing volunteering organizations. In my free time I enjoy pottery, tennis, cooking, writing, and volunteering in my community. 
+
+
+                        .</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="hana.jpeg" class="w-full h-96 object-cover" alt="Yaseen Aswad">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Hana Kazi</h3>
+                        <p class="text-white/90">Director of Media</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Overseeing our media strategy and content distribution across all platforms.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="anish.JPG" class="w-full h-96 object-cover" alt="Anish Senthilarasu">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Anish Senthilarasu</h3>
+                        <p class="text-white/90">Director of Technology</p>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Leading our technical infrastructure and digital innovation initiatives.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="eriann.JPG" class="w-full h-96 object-cover" alt="EriAnn Cruz">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">EriAnn Cruz</h3>
+                        <p class="text-white/90">Director of Art and Design</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Shaping our visual identity and creative direction across all platforms.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="lillian.JPG" class="w-full h-96 object-cover" alt="Lillian Gabrillo">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Lillian Gabrillo</h3>
+                        <p class="text-white/90">Lead Editor</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Ensuring editorial excellence and maintaining our high standards of quality.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 7 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="zaeden.png" class="w-full h-96 object-cover" alt="Zaeden Cruz">                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Zaeden Cruz</h3>
+                        <p class="text-white/90">Assistant Director of Media</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Supporting our media operations and content distribution strategies.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 8 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="elisa.jpeg" class="w-full h-96 object-cover" alt="Yaseen Aswad">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Elisa Ehiemua</h3>
+                        <p class="text-white/90">Assistant Director of Technology</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Elisa attends Meridian World School. She's inspired by God. Through everything she does she wants to show His love to people and become more like Jesus, which is constantly pushing her to be better in everything she does! In her freetime, she likes to go on walks, enjoy a good show in bed, and read her Bible + be with friends.
+                        .</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 9 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="maya.jpg" class="w-full h-96 object-cover" alt="Maya Jabbar">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Maya Jabbar</h3>
+                        <p class="text-white/90">Assistant Director of Art and Design</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Supporting our creative direction and visual design initiatives.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 10 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="maia.JPG" class="w-full h-96 object-cover" alt="Maia Bustamante">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Maia Bustamante</h3>
+                        <p class="text-white/90">Lead Publicist/Photographer</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Capturing our stories through photography and managing our public relations.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 11 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="sameeha.JPG" class="w-full h-96 object-cover" alt="Sameeha Tariq">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Sameeha Tariq</h3>
+                        <p class="text-white/90">Columnist</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Sharing unique perspectives and insights through regular columns.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 12 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Soha Noorani</h3>
+                        <p class="text-white/90">Columnist</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Contributing thoughtful analysis and commentary on current events.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 13 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="sarah.png" class="w-full h-96 object-cover" alt="Sameeha Tariq">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Sarah Orsini</h3>
+                        <p class="text-white/90">Columnist</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Providing unique insights and perspectives through regular columns.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 14 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="rabia.png" class="w-full h-96 object-cover" alt="Anaharper Araya">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Rabia Ghanchi</h3>
+                        <p class="text-white/90">Columnist</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Sharing diverse perspectives and engaging commentary on important topics.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 15 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="relative h-96 bg-[#8B7FD4]">
+                    <img src="ana.JPG" class="w-full h-96 object-cover" alt="Anaharper Araya">
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="source-serif text-2xl font-bold text-white">Anaharper Araya</h3>
+                        <p class="text-white/90">Columnist</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Contributing fresh perspectives and insightful commentary on contemporary issues.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">📧</span>
+                        </a>
+                        <a href="#" class="text-[#8B7FD4] hover:text-[#7A6FC3] transition-colors">
+                            <span class="text-lg">🔗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Us Section -->
+    <div class="max-w-4xl mx-auto px-6 mb-16 text-center">
+        <h2 class="source-serif text-3xl font-bold mb-6">Join Our Journey</h2>
+        <p class="text-xl text-gray-700 mb-8">Be part of a platform that's shaping the future of digital journalism.</p>
+        <a href="contact_us.html" class="inline-block bg-[#8B7FD4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#7A6FC3] transition-colors duration-300">
+            Get in Touch
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-600">
+            <p>© 2024 PRAECO. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
