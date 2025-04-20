@@ -38,7 +38,6 @@
     .source-serif {
   font-family: "Source Serif 4", serif;
 
-                                                
 }
 html, body {
     height: 100%;
@@ -76,7 +75,7 @@ html, body {
     
     <div class="grid grid-cols-5 grid-rows-5 gap-8 h-[72vh] mt-4 px-8 ml-[-20px]">
         <a href="selfcare_article.html" class="relative rounded-lg shadow-xl col-span-2 row-span-3 h-[42vh] w-[70vh] transition-transform duration-300 transform scale-100 hover:scale-105">
-            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/selfcare.webp" alt="Self-care products">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="selfcare.webp" alt="Self-care products">
             <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
                 <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
                     Me First?<br> 
@@ -88,7 +87,7 @@ html, body {
         
         <a href="syria_story.html">
             <div class="relative rounded-lg shadow-xl row-span-3 col-start-5 w-[44vh] h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105 ml-0">
-                <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/syrian_image.png" alt="Syria conflict image">
+                <img class="block h-full w-full object-cover rounded-lg opacity-40" src="syrian_image.png" alt="Syria conflict image">
                 <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
                     <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
                         The Dirty War in Syria:<br>
@@ -100,7 +99,7 @@ html, body {
         </a>
         
         <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 h-[30vh] transition-transform duration-300 transform scale-100 hover:scale-105 -mt-4">
-            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/people_chatting.jpg" alt="People Chatting">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="people_chatting.jpg" alt="People Chatting">
             <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
                 <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
                     Encouraging Deep Conversations
@@ -110,17 +109,17 @@ html, body {
         </div>
         
         <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 h-[30vh] w-[37vh] transition-transform duration-300 transform scale-100 hover:scale-105 ml-[-20px] -mt-4">
-            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/depressionlol.png" alt="Depressed Praeco">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="depressionlol.png" alt="Depressed Praeco">
             <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
                 <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
                     Why are we all depressed?<br>
                 </p>
                 <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Yaseen Aswad</p>
-            </div>
+            </div>q
         </div>
         
         <div class="relative rounded-lg shadow-xl col-span-2 row-span-2 row-start-4 h-[30vh] w-[44vh] transition-transform duration-300 transform scale-100 hover:scale-105 -mt-4">
-            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/palestine.jpeg" alt="Palestine">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="palestine.jpeg" alt="Palestine">
             <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
                 <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
                     Ameer Qaddumi: Violation of Freedom of Speech at the University of Texas
@@ -148,7 +147,7 @@ html, body {
             <!-- First Article Card -->
             <div class="group relative overflow-hidden rounded-xl p-4 hover:bg-gray-50 transition-all duration-300">
                 <div class="mb-3 h-24 rounded-lg overflow-hidden">
-                    <img src="assets/selfcare.webp" class="w-full h-full object-cover" alt="Self Care">
+                    <img src="selfcare.webp" class="w-full h-full object-cover" alt="Self Care">
                 </div>
                 <h3 class="source-serif text-lg font-semibold mb-1">How "Self Care" is Selfish</h3>
                 <p class="text-xs text-[#8B7FD4] mt-2">By Audrey Seigman</p>
@@ -158,7 +157,7 @@ html, body {
             <!-- Second Article Card -->
             <div class="group relative overflow-hidden rounded-xl p-4 hover:bg-gray-50 transition-all duration-300 -mt-6">
                 <div class="mb-3 h-24 rounded-lg overflow-hidden">
-                    <img src=assets/palestine.jpeg" class="w-full h-full object-cover" alt="Palestine">
+                    <img src="palestine.jpeg" class="w-full h-full object-cover" alt="Palestine">
                 </div>
                 <h3 class="source-serif text-lg font-semibold mb-1">Ameer Qaddumi: Violation of Freedom of Speech at the University of Texas</h3>
                 <p class="text-xs text-[#8B7FD4] mt-2">By Hana Kazi</p>
@@ -236,7 +235,7 @@ html, body {
 
     dropdownButton.addEventListener("click", function () {
         if (dropdownMenu.classList.contains("hidden")) {
-            dropdownMenu.classList.remove("hidden"); 
+            dropdownMenu.classList.remove("hidden");
             setTimeout(() => {
                 dropdownMenu.classList.remove("opacity-0", "scale-95");
                 dropdownMenu.classList.add("opacity-100", "scale-100");
