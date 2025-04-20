@@ -1,67 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youthenize</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>The</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
-<body>
-    <style>
-    .bgcolor{
-        background-color: #3092d8;
 
-    }
+<style>
+    
+    .navbar {
+    width: 50%; /* Cuts the navbar width in half */
+    overflow: hidden; /* Hides any overflowing content */
+}
+    
+    .exo-2 { font-family: 'Exo 2', sans-serif; }
+
+    
+    .source-serif {
+  font-family: "Source Serif 4", serif;
+
+                                                
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #eae6ff;
+}
 </style>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Vue</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li v-for="link in links" class="nav-item" :key="">
-                    <a 
-                    class="nav-link" 
-                    aria-current="page" 
-                    :href="link.url">
-                    {{link.text}}</a>
-                </li>
-                
-             </ul>
-            </div>
-            </nav>
+
+<body class="bg-[#eae6ff] min-h-screen">
     
-<div id="content" class="container">
-    <h1>{{ pageTitle }}</h1>
-    <p>{{ content }}</p>
-    <div v-if="isVisble" class="bgcolor"></div>
-</div> 
 
+    <!-- Navbar -->
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-6 py-3 flex justify-between items-center">
+        <h1 class="source-serif text-5xl font-semibold text-left">PRAECO</h1>
+        <div class="flex gap-6">
+            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
+            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="sticky top-[60px] z-20 flex justify-center gap-4 bg-[#D3CFE2] px-4 py-2">
+        <div class="relative flex gap-4">
+            <div id="active-indicator" class="absolute bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            <button class="category-btn active rounded-full px-6 py-2 text-black font-semibold relative z-10 transition-all duration-300" data-page="recent.html">Recent</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="opinion.html">Opinion</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="news.html">News</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="entertainment.html">Entertainment</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="lifestyle.html">Lifestyle</button>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-5 grid-rows-5 gap-8 h-[72vh] mt-4 px-8 ml-[-20px]">
+        <a href="selfcare_article.html" class="relative rounded-lg shadow-xl col-span-2 row-span-3 h-[42vh] w-[70vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/selfcare.webp" alt="Self-care products">
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
+                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
+                    Me First?<br> 
+                    How "Self Care" is Selfish
+                </p>
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Audrey Seigman</p>
+            </div>
+        </a>
+        
+        <a href="syria_story.html">
+            <div class="relative rounded-lg shadow-xl row-span-3 col-start-5 w-[44vh] h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105 ml-0">
+                <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/syrian_image.png" alt="Syria conflict image">
+                <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
+                    <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">
+                        The Dirty War in Syria:<br>
+                        A Youth's Story
+                    </p>
+                    <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Yaseen Aswad</p>
+                </div>
+            </div>
+        </a>
+        
+        <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 h-[30vh] transition-transform duration-300 transform scale-100 hover:scale-105 -mt-4">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/people_chatting.jpg" alt="People Chatting">
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    Encouraging Deep Conversations
+                </p>
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Maya Jabbar</p>
+            </div>
+        </div>
+        
+        <div class="relative rounded-lg shadow-xl row-span-2 row-start-4 h-[30vh] w-[37vh] transition-transform duration-300 transform scale-100 hover:scale-105 ml-[-20px] -mt-4">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/depressionlol.png" alt="Depressed Praeco">
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    Why are we all depressed?<br>
+                </p>
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Yaseen Aswad</p>
+            </div>q
+        </div>
+        
+        <div class="relative rounded-lg shadow-xl col-span-2 row-span-2 row-start-4 h-[30vh] w-[44vh] transition-transform duration-300 transform scale-100 hover:scale-105 -mt-4">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="assets/palestine.jpeg" alt="Palestine">
+            <div class="absolute inset-0 flex flex-col justify-center h-full ml-6 p-6">
+                <p class="font-['Playfair_Display'] text-black text-2xl mb-auto">
+                    Ameer Qaddumi: Violation of Freedom of Speech at the University of Texas
+                </p>
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Hana Kazi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium For You Column -->
+    <div class="absolute top-[120px] right-0 w-[400px] h-[550px] bg-white shadow-2xl ml-[-20px] border-8 border-[#8b7fd4]">
+        <!-- Top Purple Border -->
+        <div class="h-4 bg-[#8b7fd4]"></div>
+
+        <!-- Header Section -->
+        <div class="relative overflow-hidden bg-[#D3CFE2] p-6">
+            <div class="relative z-10 flex flex-col items-center">
+                <h2 class="source-serif text-2xl font-bold text-black mb-1">Editor's Pick</h2>
+                <p class="text-black/80 text-sm">Today's Must-Read</p>
+            </div>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="px-4 py-4">
+            <!-- First Article Card -->
+            <div class="group relative overflow-hidden rounded-xl p-4 hover:bg-gray-50 transition-all duration-300">
+                <div class="mb-3 h-24 rounded-lg overflow-hidden">
+                    <img src="assets/selfcare.webp" class="w-full h-full object-cover" alt="Self Care">
+                </div>
+                <h3 class="source-serif text-lg font-semibold mb-1">How "Self Care" is Selfish</h3>
+                <p class="text-xs text-[#8B7FD4] mt-2">By Audrey Seigman</p>
+                <div class="h-0.5 w-0 group-hover:w-full bg-[#8B7FD4] mt-3 transition-all duration-300"></div>
+            </div>
+
+            <!-- Second Article Card -->
+            <div class="group relative overflow-hidden rounded-xl p-4 hover:bg-gray-50 transition-all duration-300 -mt-6">
+                <div class="mb-3 h-24 rounded-lg overflow-hidden">
+                    <img src=assets/palestine.jpeg" class="w-full h-full object-cover" alt="Palestine">
+                </div>
+                <h3 class="source-serif text-lg font-semibold mb-1">Ameer Qaddumi: Violation of Freedom of Speech at the University of Texas</h3>
+                <p class="text-xs text-[#8B7FD4] mt-2">By Hana Kazi</p>
+                <div class="h-0.5 w-0 group-hover:w-full bg-[#8B7FD4] mt-3 transition-all duration-300"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Accent -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-[#8B7FD4]"></div>
+    </div>
+
+
+
+  
+
+    <script>
+        // Select all category buttons and the active indicator
+        const buttons = document.querySelectorAll('.category-btn');
+        const activeIndicator = document.getElementById('active-indicator');
+        let currentActiveButton = buttons[0];
+
+        // Function to update the active indicator position
+        function updateActiveIndicator(button) {
+            const buttonRect = button.getBoundingClientRect();
+            const containerRect = button.parentElement.getBoundingClientRect();
+            
+            activeIndicator.style.width = `${buttonRect.width}px`;
+            activeIndicator.style.height = `${buttonRect.height}px`;
+            activeIndicator.style.left = `${buttonRect.left - containerRect.left}px`;
+            activeIndicator.style.top = `${buttonRect.top - containerRect.top}px`;
+        }
+
+        // Initialize the active indicator
+        updateActiveIndicator(currentActiveButton);
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active button
+                currentActiveButton.classList.remove('active');
+                this.classList.add('active');
+                currentActiveButton = this;
+
+                // Animate the active indicator
+                updateActiveIndicator(this);
+
+                // Add a subtle scale animation to the clicked button
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+
+                // Redirect to the page specified in data-page attribute
+                const page = this.getAttribute('data-page');
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 300);
+            });
+        });
+
+        // Update indicator position on window resize
+        window.addEventListener('resize', () => {
+            updateActiveIndicator(currentActiveButton);
+        });
+    </script>
+
+
+<!-- Wrapper Div (Right-Aligned Section) -->
+
+<!-- JavaScript to Toggle Dropdown with Smooth Animation -->
 <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
 
-     Vue.createApp({
-        data(){
-            return{
-                links: [
-                    {text: 'Home', url: "index.html"},
-                    {text:'Article', url: "article.html"}
-                ]
-            };
+    dropdownButton.addEventListener("click", function () {
+        if (dropdownMenu.classList.contains("hidden")) {
+            dropdownMenu.classList.remove("hidden"); 
+            setTimeout(() => {
+                dropdownMenu.classList.remove("opacity-0", "scale-95");
+                dropdownMenu.classList.add("opacity-100", "scale-100");
+            }, 10);
+        } else {
+            dropdownMenu.classList.remove("opacity-100", "scale-100");
+            dropdownMenu.classList.add("opacity-0", "scale-95");
+            setTimeout(() => {
+                dropdownMenu.classList.add("hidden");
+            }, 300); // Matches the animation duration
         }
-    }).mount('nav');
-    Vue.createApp({
-        data(){
-            return{
-                pageTitle: 'Youthenize',
-                content : "Test"
+    });
 
-            };
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("opacity-100", "scale-100");
+            dropdownMenu.classList.add("opacity-0", "scale-95");
+            setTimeout(() => {
+                dropdownMenu.classList.add("hidden");
+            }, 300);
         }
-    }).mount('#content');
-
-
+    });
 </script>
+
+
+
 
 </body>
 </html>
