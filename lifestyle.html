@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle - PRAECO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #eae6ff;
+        }
+        .source-serif {
+            font-family: 'Source Serif 4', serif;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-6 py-3 flex justify-between items-center">
+        <h1 class="source-serif text-5xl font-semibold text-left">PRAECO</h1>
+        <div class="flex gap-6">
+            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
+            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="sticky top-[60px] z-20 flex justify-center gap-4 bg-[#D3CFE2] px-4 py-2">
+        <div class="relative flex gap-4">
+            <div id="active-indicator" class="absolute bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="index.html">Recent</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="opinion.html">Opinion</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="news.html">News</button>
+            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="entertainment.html">Entertainment</button>
+            <button class="category-btn active rounded-full px-6 py-2 text-black font-semibold relative z-10 transition-all duration-300" data-page="lifestyle.html">Lifestyle</button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-8 h-[72vh] mt-4 px-8">
+        <a href="nursing_opportunities.html" class="relative rounded-lg shadow-xl h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" 
+                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="Nurse working">
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-6">
+                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">Nursing:<br>A Career of Opportunities</p>
+                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Maya Jabbar</p>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // Select all category buttons and the active indicator
+        const buttons = document.querySelectorAll('.category-btn');
+        const activeIndicator = document.getElementById('active-indicator');
+        let currentActiveButton = document.querySelector('.category-btn.active');
+
+        // Function to update the active indicator position
+        function updateActiveIndicator(button) {
+            const buttonRect = button.getBoundingClientRect();
+            const containerRect = button.parentElement.getBoundingClientRect();
+            
+            activeIndicator.style.width = `${buttonRect.width}px`;
+            activeIndicator.style.height = `${buttonRect.height}px`;
+            activeIndicator.style.left = `${buttonRect.left - containerRect.left}px`;
+            activeIndicator.style.top = `${buttonRect.top - containerRect.top}px`;
+        }
+
+        // Initialize the active indicator
+        updateActiveIndicator(currentActiveButton);
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active button
+                currentActiveButton.classList.remove('active');
+                this.classList.add('active');
+                currentActiveButton = this;
+
+                // Animate the active indicator
+                updateActiveIndicator(this);
+
+                // Redirect to the page specified in data-page attribute
+                const page = this.getAttribute('data-page');
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 300);
+            });
+        });
+
+        // Update indicator position on window resize
+        window.addEventListener('resize', () => {
+            updateActiveIndicator(currentActiveButton);
+        });
+    </script>
+</body>
+</html> 
