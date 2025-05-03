@@ -4,128 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encouraging Deep Conversations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Times New Roman, serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0ff;
-            line-height: 1.5;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .title {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        
-        .author {
-            color: purple;
+        * {
             margin: 0;
-            font-size: 18px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .date {
-            color: black;
-            font-size: 18px;
-            margin-left: 5px;
+        .source-serif {
+            font-family: "Source Serif 4", serif;
         }
-        
-        .image-container {
-            text-align: center;
-            margin: 20px 0;
+        .exo-2 { 
+            font-family: 'Exo 2', sans-serif; 
         }
-        
-        .main-image {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .quote {
-            font-style: italic;
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .quote-author {
-            text-align: center;
-            margin-top: 5px;
-        }
-        
-        .section-title {
-            font-weight: bold;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        
-        .content {
-            text-align: justify;
-        }
-        
-        .divider {
-            border: none;
-            border-top: 1px solid #999;
-            margin: 30px 0;
-        }
-        
-        .references {
-            margin-top: 20px;
-        }
-        
-        .reference-item {
-            margin-left: 40px;
-            text-indent: -40px;
-            margin-bottom: 10px;
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: "Times New Roman", serif;
+            background-color: #f0f0ff;
         }
     </style>
 </head>
-<body>
-    <div class="header">
-        <h1 class="title">Encouraging Deep Conversations</h1>
-        <span class="author">Maya Jabbar</span>
-        <span class="date">March 31st 2025</span>
+<body class="bg-[#f0f0ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
+                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+            </div>
+        </div>
     </div>
-    
-    <div class="image-container">
-        <img class="main-image" src="deepConvo.png" alt="People working at laptops on a table" id="deepConvo">
-    </div>
-    
-    <p class="quote">"Our ability to reach unity in diversity will be the beauty and the test of our civilization."</p>
-    <p class="quote-author">-Mahatma Gandhi.</p>
-    
-    <h2 class="section-title">What does it mean to have a deep conversation?</h2>
-    
-    <div class="content">
-        <p>In a world where people come from various backgrounds and situations, we struggle with fostering welcoming environments in which everyone feels comfortable. Despite this, it is important to encourage an environment in which various groups of people regardless of their background can come together, drawing meaningful conversation and respecting each other as individuals. While it seems like an easy feat, it's anything but, as there are many occasions where people have difficulty adapting to new environments due to not feeling comfortable or welcomed.</p>
-    </div>
-    
-    <h2 class="section-title">How can we gain the skill set to encourage deep conversations?</h2>
-    
-    <div class="content">
-        <p>We can start by being empathetic and stepping out of our self centered world. Everyone in life goes through things, and has their own experiences. To truly understand one another we need to put ourselves in other people's shoes; look at life through their perspective. As described by Marshall Rosenburg, in his book Nonviolent communication, he discusses how demonstrating empathy and having structured communication can resolve conflicts and encourage respect in relationships. People may react in certain ways due to their background and understanding that – along with viewing things from their perspective – we can learn not to always take what they say to heart. This is what encourages that healthy communication and allows for diplomatic discussions. Now this isn't an excuse for being rude, but an explanation of how to understand other people. In the situation where someone may be rude, calm and with a clear head, address the situation. This can mean gently pointing out how what they said is offensive and not appreciated in this environment that you are trying to build.</p>
+
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold mb-4" style="font-family: 'Times New Roman', serif;">Encouraging Deep Conversations</h1>
         
-        <p>To foster such an environment we can gather insight from Henri Tajfel, a polish social psychologist who developed the Social Identity Theory. His research reveals how individuals derive a sense of identity from their social circles which can cause intergroup conflict and division. To overcome such barriers, we must prompt inclusivity by fostering shared goals, mutual understanding, and a sense of belonging that transcends our differences. However, inclusivity is not just bringing people together, it requires a conscientious effort to shape how one communicates. When we approach a conversation with intention we create spaces where diverse perspectives are not only welcomed but valued. By respecting different backgrounds and experiences we set the expectations for meaningful collaboration and growth.</p>
+        <div class="flex items-center gap-4 mb-4">
+            <a href="#" class="text-purple-600 hover:text-purple-800" style="font-family: 'Times New Roman', serif;">Maya Jabbar</a>
+            <span class="text-gray-600">March 31st 2025</span>
+        </div>
+
+        <div class="mb-8">
+            <img src="deepConvo.png" alt="People working at laptops on a table" class="w-full h-[400px] object-cover rounded-lg shadow-lg" id="deepConvo">
+        </div>
+
+        <article class="prose prose-lg max-w-none">
+            <div class="text-center italic my-8">
+                <p>"Our ability to reach unity in diversity will be the beauty and the test of our civilization."</p>
+                <p class="mt-2">-Mahatma Gandhi.</p>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">What does it mean to have a deep conversation?</h2>
+            
+            <p class="text-lg leading-relaxed mb-6">
+                In a world where people come from various backgrounds and situations, we struggle with fostering welcoming environments in which everyone feels comfortable. Despite this, it is important to encourage an environment in which various groups of people regardless of their background can come together, drawing meaningful conversation and respecting each other as individuals. While it seems like an easy feat, it's anything but, as there are many occasions where people have difficulty adapting to new environments due to not feeling comfortable or welcomed.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">How can we gain the skill set to encourage deep conversations?</h2>
+            
+            <p class="text-lg leading-relaxed mb-6">
+                We can start by being empathetic and stepping out of our self centered world. Everyone in life goes through things, and has their own experiences. To truly understand one another we need to put ourselves in other people's shoes; look at life through their perspective. As described by Marshall Rosenburg, in his book Nonviolent communication, he discusses how demonstrating empathy and having structured communication can resolve conflicts and encourage respect in relationships. People may react in certain ways due to their background and understanding that – along with viewing things from their perspective – we can learn not to always take what they say to heart. This is what encourages that healthy communication and allows for diplomatic discussions. Now this isn't an excuse for being rude, but an explanation of how to understand other people. In the situation where someone may be rude, calm and with a clear head, address the situation. This can mean gently pointing out how what they said is offensive and not appreciated in this environment that you are trying to build.
+            </p>
+            
+            <p class="text-lg leading-relaxed mb-6">
+                To foster such an environment we can gather insight from Henri Tajfel, a polish social psychologist who developed the Social Identity Theory. His research reveals how individuals derive a sense of identity from their social circles which can cause intergroup conflict and division. To overcome such barriers, we must prompt inclusivity by fostering shared goals, mutual understanding, and a sense of belonging that transcends our differences. However, inclusivity is not just bringing people together, it requires a conscientious effort to shape how one communicates. When we approach a conversation with intention we create spaces where diverse perspectives are not only welcomed but valued. By respecting different backgrounds and experiences we set the expectations for meaningful collaboration and growth.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">How can we encourage deep conversations in our daily lives?</h2>
+            
+            <p class="text-lg leading-relaxed mb-6">
+                It becomes necessary to then implement a strong framework of discussion, one that is built on respect, curiosity, and empathy. This starts with leading by example through active listening, engaging in open dialogue, and ensuring people feel heard without worrying about judgment. To navigate difficult topics one must approach the subject with an open mind, willingness to understand, and acknowledge that different viewpoints hold value, even when they challenge our own. No one perspective is superior, recognizing this and the fact that everyone is entitled to their own opinions can allow for more enriching discussions. When we cultivate such habits, not only do we create better conversations, we build a community in which every voice has power and meaning.
+            </p>
+        </article>
+
+        <hr class="border-t border-gray-300 my-8">
+
+        <div class="mt-8">
+            <h3 class="text-xl font-bold mb-4">References:</h3>
+            
+            <p class="ml-8 -indent-8 mb-4">
+                Leaper, Campbell. "Social Identity Theory - an Overview ." Sciencedirect.com, 2011, <br>www.sciencedirect.com/topics/psychology/social-identity-theory.
+            </p>
+            
+            <p class="ml-8 -indent-8 mb-4">
+                Rosenberg, Marshall B. Nonviolent Communication: A Language of Life. 3rd ed., Encinitas, Ca, <br>Puddledancer Press, 2015.
+            </p>
+        </div>
     </div>
-    
-    <h2 class="section-title">How can we encourage deep conversations in our daily lives?</h2>
-    
-    <div class="content">
-        <p>It becomes necessary to then implement a strong framework of discussion, one that is built on respect, curiosity, and empathy. This starts with leading by example through active listening, engaging in open dialogue, and ensuring people feel heard without worrying about judgment. To navigate difficult topics one must approach the subject with an open mind, willingness to understand, and acknowledge that different viewpoints hold value, even when they challenge our own. No one perspective is superior, recognizing this and the fact that everyone is entitled to their own opinions can allow for more enriching discussions. When we cultivate such habits, not only do we create better conversations, we build a community in which every voice has power and meaning.</p>
-    </div>
-    
-    <hr class="divider">
-    
-    <div class="references">
-        <h3>References:</h3>
-        
-        <p class="reference-item">Leaper, Campbell. "Social Identity Theory - an Overview ." Sciencedirect.com, 2011, <br>www.sciencedirect.com/topics/psychology/social-identity-theory.</p>
-        
-        <p class="reference-item">Rosenberg, Marshall B. Nonviolent Communication: A Language of Life. 3rd ed., Encinitas, Ca, <br>Puddledancer Press, 2015.</p>
+
+    <!-- Back to Home -->
+    <div class="fixed bottom-8 right-8">
+        <a href="landing_page.html" class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-800 transition-colors duration-300 shadow-lg">
+            Back to Home
+        </a>
     </div>
 
     <script>
