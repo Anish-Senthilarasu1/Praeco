@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Praeco - Coming Soon</title>
+    <link rel="icon" type="image/png" href="praecoLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #eae6ff;
+        }
+
+        .exo-2 { 
+            font-family: 'Exo 2', sans-serif; 
+        }
+
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Active indicator styling */
+        #active-indicator {
+            position: absolute;
+            background-color: white;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Pulse animation for coming soon */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-filter {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 0.5rem;
+            }
+
+            .category-btn {
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-title {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-links {
+                gap: 1rem;
+            }
+            
+            .category-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
+                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="sticky top-[60px] z-20 flex justify-center category-filter gap-2 md:gap-4 bg-[#D3CFE2] px-2 md:px-4 py-2 overflow-x-auto whitespace-nowrap">
+        <div class="relative flex gap-2 md:gap-4">
+            <div id="active-indicator" class="absolute bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="index.html">Recent</button>
+            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="opinion.html">Opinion</button>
+            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="news.html">News</button>
+            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="entertainment.html">Entertainment</button>
+            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="lifestyle.html">Lifestyle</button>
+        </div>
+    </div>
+    
+    <!-- Coming Soon Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex flex-col items-center justify-center min-h-[60vh]">
+            <!-- Coming Soon Box -->
+            <div class="bg-white rounded-xl shadow-2xl border-8 border-[#8b7fd4] max-w-2xl w-full pulse-animation">
+                <!-- Top Purple Border -->
+                <div class="h-4 bg-[#8b7fd4]"></div>
+                
+                <!-- Content -->
+                <div class="p-8 md:p-12 flex flex-col items-center">
+                    <h1 class="source-serif text-4xl md:text-5xl font-bold text-center mb-6">Coming Soon</h1>
+                    <div class="w-24 h-1 bg-[#8b7fd4] mb-8"></div>
+                    <p class="playfair text-xl md:text-2xl text-center mb-8">We're working on exciting new articles for this section!</p>
+                    <p class="text-lg text-gray-600 text-center mb-6">Check back soon for fresh content.</p>
+                    
+                    <!-- Return Home Button -->
+                    <a href="index.html" class="mt-4 px-6 py-3 bg-[#8b7fd4] text-white rounded-full hover:bg-[#7b6fc4] transition-all duration-300 font-semibold">
+                        Return to Home
+                    </a>
+                </div>
+                
+                <!-- Bottom Accent -->
+                <div class="h-4 bg-[#8b7fd4]"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Select all category buttons and the active indicator
+        const buttons = document.querySelectorAll('.category-btn');
+        const activeIndicator = document.getElementById('active-indicator');
+        
+        // Set active button based on current page URL
+        let currentPath = window.location.pathname;
+        let filename = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+        
+        let currentActiveButton;
+        buttons.forEach(button => {
+            if (button.getAttribute('data-page') === filename) {
+                button.classList.add('active');
+                currentActiveButton = button;
+            }
+        });
+        
+        // If no match found, default to first button
+        if (!currentActiveButton) {
+            currentActiveButton = buttons[3];
+            currentActiveButton.classList.add('active');
+        }
+
+        // Function to update the active indicator position
+        function updateActiveIndicator(button) {
+            const buttonRect = button.getBoundingClientRect();
+            const containerRect = button.parentElement.getBoundingClientRect();
+            
+            activeIndicator.style.width = `${buttonRect.width}px`;
+            activeIndicator.style.height = `${buttonRect.height}px`;
+            activeIndicator.style.left = `${buttonRect.left - containerRect.left}px`;
+            activeIndicator.style.top = `${buttonRect.top - containerRect.top}px`;
+        }
+
+        // Initialize the active indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            updateActiveIndicator(currentActiveButton);
+        });
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active button
+                currentActiveButton.classList.remove('active');
+                this.classList.add('active');
+                currentActiveButton = this;
+
+                // Animate the active indicator
+                updateActiveIndicator(this);
+
+                // Redirect to the page specified in data-page attribute
+                const page = this.getAttribute('data-page');
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 300);
+            });
+        });
+
+        // Update indicator position on window resize
+        window.addEventListener('resize', () => {
+            updateActiveIndicator(currentActiveButton);
+        });
+    </script>
+</body>
+</html>
