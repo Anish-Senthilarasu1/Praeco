@@ -2,57 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Are We All Depressed?</title>
+    <title>Why Are We All Depressed? - The Praeco</title>
+    <link rel="icon" type="image/png" href="praecoLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #eae6ff;
+        }
+
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+
         body {
-            font-family: Times New Roman, serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0ff;
-            line-height: 1.5;
+            background-color: #eae6ff;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
+        /* Active indicator styling */
+        #active-indicator {
+            position: absolute;
+            background-color: white;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
 
-        .title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: bold;
+        /* Card hover animations */
+        .article-card {
+            transition: transform 0.3s ease-in-out;
         }
 
-        .content, .conclusion {
-            text-align: justify;
-            margin: 0 100px 20px 100px;
+        .article-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive grid system */
+        @media (max-width: 1280px) {
+            .main-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .editors-pick {
+                position: static;
+                width: 100%;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-filter {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 0.5rem;
+            }
+
+            .category-btn {
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-title {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-links {
+                gap: 1rem;
+            }
+            
+            .category-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="header">
-        <h1 class="title">Why Are We All Depressed?</h1>
+
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
+                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+            </div>
+        </div>
     </div>
 
-    <div class="content">
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="font-['Playfair_Display'] text-4xl font-bold mb-4">Why Are We All Depressed?</h1>
+        
+        <div class="flex items-center gap-4 mb-4">
+            <a href="#" class="text-[#8B7FD4] hover:text-[#6B5EAF] font-['Playfair_Display']">Yaseen Aswad</a>
+            <span class="text-gray-600">February 7th, 2025</span>
+        </div>
 
-        <p>One in five youth are affected by depression; but what does that even mean? Depression is a term we use regularly in our modern day and age, its origin dates back to 14th century France with much more of a scientific connotation compared to how we use it today.</p>
+        <div class="mb-8">
+            <img src="depressionlol.png" alt="Depressed Praeco" class="w-full h-[400px] object-cover rounded-lg shadow-lg">
+        </div>
 
-        <p>From the jokes, to the texts, to the talks, we hear it everywhere, and many of us feel it as well. It’s sadness, hopelessness, withdrawal from normal life. A term that we often use colloquially, but when we use it we don’t always realize what it really means.</p>
+        <article class="prose prose-lg max-w-none font-['Playfair_Display']">
+            <p class="text-lg leading-relaxed mb-6">
+                One in five youth are affected by depression; but what does that even mean? Depression is a term we use regularly in our modern day and age, but its origin dates back to 14th century France with much more of a scientific connotation compared to how we use it today.
+            </p>
 
-        <p>The connotation that depression has nowadays allows us to throw it around lightly—“I’m depressed” is a common phrase we use to a somewhat sarcastic degree. Maybe the reason that we joke about it is to cover how truly depressed we are. That begs us to ask the question: why are we all depressed? America has some of the highest depression rates, even though most children live such comfortable lives here. So it isn’t necessarily caused by lack of comfort, food, or death—unlike many children around the world who may face those very real issues. Yet these people are often some of the most grateful, just for the chance to live another day. So what is it that we as a society, and in America specifically, are missing?</p>
+            <p class="text-lg leading-relaxed mb-6">
+                From the jokes, to the texts, to the talks, we hear it everywhere, and many of us feel it as well. It's sadness, hopelessness, withdrawal from normal life. It's a term that we often use colloquially, but when we use it we don't always realize what it really means.
+            </p>
 
-        <p>The answer is passion.</p>
+            <p class="text-lg leading-relaxed mb-6">
+                The connotation that depression has nowadays allows us to throw it around lightly "I'm depressed" is a common phrase we use to a somewhat sarcastic degree. Maybe the reason that we joke about it is to cover how truly depressed we are. That begs the questions, why are we all depressed? America has some of the highest depression rates, even though most children live comfortable lives here. So it isn't necessarily caused by lack of comfort, lack of food, lack of death; unlike the many children around the world in countries who may face these issues that would give them reason to lose hope. Yet these people are some of the most grateful, just for the chance to get to live another day. So what is it that we as a society, and in America specifically, are missing?
+            </p>
 
-        <p>The daily lives of most American youth have become extremely mundane and shallow. We spend hours of our lives scrolling on endless screens, and when we finally take our eyes off the screens—the few hours we are forced to at school—we don’t have the attention span to learn or grow. All we try to do is get attention from those around us to release the same dopamine we get from our endless scrolling. This cycle continues, and we stay content in our shallow lives, until we snap. Until we are unable to scroll away our problems, and our friends no longer give us the attention we crave. Then we crumble, leading us to recognize the shallowness within our lives that was once hidden by the rush of dopamine.</p>
+            <p class="text-lg leading-relaxed mb-6 font-semibold italic">
+                The answer is <em>passion</em>.
+            </p>
 
-        <p>Yet, we continue to tell ourselves that we can’t be depressed because there are so many youths out there just like us who aren’t depressed. Not only that, but they have the perfect life, the perfect grades, the perfect friends, the perfect everything. This further submerges us into a depressed state. Not only do we feel sadness within ourselves, but jealousy starts to brew. As we continue comparing ourselves to the lives and achievements of others, we create an unrealistic idea of perfection that we will never reach. In fact, no one has reached it, because unbeknownst to most, no one is perfect. Everyone is flawed, everyone is depressed in some way. It isn’t pessimistic to believe so—rather, by understanding that no one is truly perfect we can be more content with our own lives.</p>
+            <p class="text-lg leading-relaxed mb-6">
+                The daily lives of most American youth have become extremely mundane and shallow. We spend endless hours of our lives scrolling on screens and when we finally take our eyes off the screens, the few hours we are forced to be at school, we don't have the attention span to learn or grow. All we try to do is get attention from those around us to release the same dopamine from our endless scrolling. This cycle continues, and we stay content in our shallow lives, until we snap. Until we are unable to scroll away our problems, and until our friends don't give us the attention we crave. Then we crumble, leading us to recognize the shallowness within our lives once hidden from us by the rushing dopamine.
+            </p>
 
-        <p>Ok, so now what—are we all depressed then?</p>
+            <p class="text-lg leading-relaxed mb-6">
+                Yet, we continue to tell ourselves that we can't be depressed because there are so many youths out there just like us who aren't depressed. Not only that, but they have the perfect life, the perfect grades, the perfect friends, the perfect everything. This further submerges us into a depressed state, not only do we feel sadness within ourselves, but jealousy starts to brew. As we continue comparing ourselves to the lives and achievements of others, we create an unrealistic idea of perfection that we will never reach. In fact, no one has reached it, because unbeknownst to most, no one is perfect. Everyone is flawed, everyone is depressed in some way. It isn't pessimistic to believe so, rather by understanding that no one is truly perfect we can be more content with our own lives.
+            </p>
 
-        <p>Yes, we are all depressed, but depression isn’t always a bad thing. It’s a chance to think critically about our lives, a chance to consider who we really are, it's a chance to fix ourselves. We become depressed for a reason—to warn us that maybe those hours on the screen or materialistic aspirations aren’t the best for us. Maybe we can instead use depression as a fuel to be better—as a chance to learn more about ourselves.</p>
+            <p class="text-lg leading-relaxed mb-6">
+                Ok, so now what, we're all depressed then?
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6">
+                Yes, <em>we are all depressed,</em> but depression isn't always a bad thing. It's a chance to think critically about our lives, a chance to consider who we really are, it's a chance to re-evaluate ourselves. We become depressed for a reason, to warn us that maybe those hours on the screen or materialistic aspirations aren't the best for us. Maybe, we can instead use depression as a fuel to be better and as a chance to learn more about ourselves.
+            </p>
+        </article>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="fixed bottom-8 right-8">
+        <a href="index.html" class="bg-[#8B7FD4] text-white px-6 py-3 rounded-full hover:bg-[#6B5EAF] transition-colors duration-300 shadow-lg">
+            Back to Home
+        </a>
     </div>
 </body>
 </html>
