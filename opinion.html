@@ -32,52 +32,54 @@
 <body class="bg-[#eae6ff] min-h-screen">
 
     <!-- Navbar -->
-    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center source-serif text-5xl font-semibold text-left">
-          PRAECO
-          <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="flex items-center source-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-left">
+          <span class="hidden sm:inline">PRAECO</span>
+          <span class="sm:hidden">P</span>
+          <img src="praecoLogo.png" alt="Praeco Logo" class="ml-1 sm:ml-2 h-8 sm:h-10 md:h-14">
         </a>
 
-        <div class="flex gap-6">
-            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
-            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
+        <div class="flex gap-3 sm:gap-6">
+            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">About</a>
+            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">Contact</a>
         </div>
     </div>
 
     <!-- Category Filter -->
-    <div class="sticky top-[60px] z-20 flex justify-center gap-4 bg-[#D3CFE2] px-4 py-2">
-        <div class="relative flex gap-4">
+    <div class="sticky top-[50px] sm:top-[60px] z-20 flex justify-center bg-[#D3CFE2] px-2 sm:px-4 py-2 overflow-x-auto">
+        <div class="relative flex gap-2 sm:gap-4 min-w-max">
             <div id="active-indicator" class="absolute bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
-            <button class="category-btn active rounded-full px-6 py-2 text-black font-semibold relative z-10 transition-all duration-300" data-page="index.html">Recent</button>
-            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="opinion.html">Opinion</button>
-            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="news.html">News</button>
-            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="entertainment.html">Entertainment</button>
-            <button class="category-btn rounded-full px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="lifestyle.html">Lifestyle</button>
+            <button class="category-btn active rounded-full px-3 sm:px-6 py-2 text-black font-semibold relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="index.html">Recent</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="opinion.html">Opinion</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="news.html">News</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="entertainment.html">Entertainment</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="lifestyle.html">Lifestyle</button>
         </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-8 h-[72vh] mt-4 px-8">
-        <a href="selfcare_article.html" class="relative rounded-lg shadow-xl h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+    <!-- Articles Grid - Responsive -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-4 px-4 sm:px-6 lg:px-8 pb-8">
+        <a href="selfcare_article.html" class="relative rounded-lg shadow-xl h-[300px] sm:h-[350px] lg:h-[400px] transition-transform duration-300 transform scale-100 hover:scale-105">
             <img class="block h-full w-full object-cover rounded-lg opacity-40" src="selfcare.webp" alt="Self-care products">
-            <div class="absolute inset-0 flex flex-col justify-center h-full p-6">
-                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">Me First?<br> How "Self Care" is Selfish</p>
-                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Audrey Seigman</p>
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-4 sm:p-6">
+                <p class="font-['Playfair_Display'] text-black text-xl sm:text-2xl lg:text-3xl mb-auto leading-tight">Me First?<br> How "Self Care" is Selfish</p>
+                <p class="font-['Playfair_Display'] text-black text-sm sm:text-base lg:text-lg mb-4">By: Audrey Seigman</p>
             </div>
         </a>
 
-        <a href="deepconversations.html" class="relative rounded-lg shadow-xl h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+        <a href="deepconversations.html" class="relative rounded-lg shadow-xl h-[300px] sm:h-[350px] lg:h-[400px] transition-transform duration-300 transform scale-100 hover:scale-105">
             <img class="block h-full w-full object-cover rounded-lg opacity-40" src="people_chatting.jpg" alt="People Chatting">
-            <div class="absolute inset-0 flex flex-col justify-center h-full p-6">
-                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">Encouraging Deep Conversations</p>
-                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Maya Jabbar</p>
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-4 sm:p-6">
+                <p class="font-['Playfair_Display'] text-black text-xl sm:text-2xl lg:text-3xl mb-auto leading-tight">Encouraging Deep Conversations</p>
+                <p class="font-['Playfair_Display'] text-black text-sm sm:text-base lg:text-lg mb-4">By: Maya Jabbar</p>
             </div>
         </a>
 
-        <a href="angry_kids.html" class="relative rounded-lg shadow-xl h-[42vh] transition-transform duration-300 transform scale-100 hover:scale-105">
+        <a href="angry_kids.html" class="relative rounded-lg shadow-xl h-[300px] sm:h-[350px] lg:h-[400px] transition-transform duration-300 transform scale-100 hover:scale-105 md:col-span-2 lg:col-span-1">
             <img class="block h-full w-full object-cover rounded-lg opacity-40" src="kids_angry.jpeg" alt="Why Are Kids So Angry Now">
-            <div class="absolute inset-0 flex flex-col justify-center h-full p-6">
-                <p class="font-['Playfair_Display'] text-black text-3xl mb-auto">Why Are Kids So Angry Now?</p>
-                <p class="font-['Playfair_Display'] text-black text-1xl mb-4">By: Rabia Ghanchi</p>
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-4 sm:p-6">
+                <p class="font-['Playfair_Display'] text-black text-xl sm:text-2xl lg:text-3xl mb-auto leading-tight">Why Are Kids So Angry Now?</p>
+                <p class="font-['Playfair_Display'] text-black text-sm sm:text-base lg:text-lg mb-4">By: Rabia Ghanchi</p>
             </div>
         </a>
     </div>
