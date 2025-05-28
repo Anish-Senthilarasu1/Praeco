@@ -16,19 +16,48 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .source-serif {
-            font-family: "Source Serif 4", serif;
-        }
-        .exo-2 { 
-            font-family: 'Exo 2', sans-serif; 
-        }
-        body {
-            font-family: "Times New Roman", serif;
-            background-color: #eae6ff;
+
+        html, body {
             height: 100%;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            background: #eae6ff;
+        }
+
+        .exo-2 { 
+            font-family: 'Exo 2', sans-serif; 
+        }
+
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #eae6ff;
+        }
+
+        /* Responsive navbar styling */
+        @media (max-width: 768px) {
+            .navbar-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-title {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-links {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -41,8 +70,8 @@
                 <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
             </h1>
             <div class="flex gap-3 md:gap-6 navbar-links">
-                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
-                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+                <a href="about_us.html" class="font-sans font-poppins text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
+                <a href="contact_us.html" class="font-sans font-poppins text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
             </div>
         </div>
     </div>
