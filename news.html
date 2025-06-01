@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Praeco - Coming Soon</title>
-    <link rel="icon" type="image/png" href="praecoLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html, body {
             height: 100%;
             margin: 0;
@@ -26,156 +18,69 @@
             overflow-x: hidden;
             background: #eae6ff;
         }
-
-        .exo-2 { 
-            font-family: 'Exo 2', sans-serif; 
-        }
-
         .source-serif {
-            font-family: "Source Serif 4", serif;
-        }
-
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Active indicator styling */
-        #active-indicator {
-            position: absolute;
-            background-color: white;
-            border-radius: 9999px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Pulse animation for coming soon */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .pulse-animation {
-            animation: pulse 3s infinite ease-in-out;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .navbar-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .category-filter {
-                overflow-x: auto;
-                justify-content: flex-start;
-                padding: 0.5rem;
-            }
-
-            .category-btn {
-                flex-shrink: 0;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .navbar-title {
-                font-size: 1.5rem;
-            }
-            
-            .navbar-links {
-                gap: 1rem;
-            }
-            
-            .category-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.875rem;
-            }
+            font-family: 'Source Serif 4', serif;
         }
     </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="icon" type="image/png" href="praecoLogo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-[#eae6ff] min-h-screen">
+
     <!-- Navbar -->
-    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
-        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
-            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
-                PRAECO
-                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
-            </h1>
-            <div class="flex gap-3 md:gap-6 navbar-links">
-                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
-                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
-            </div>
+    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="flex items-center source-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-left">
+          <span class="hidden sm:inline">PRAECO</span>
+          <span class="sm:hidden">P</span>
+          <img src="praecoLogo.png" alt="Praeco Logo" class="ml-1 sm:ml-2 h-8 sm:h-10 md:h-14">
+        </a>
+
+        <div class="flex gap-3 sm:gap-6">
+            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">About</a>
+            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">Contact</a>
         </div>
     </div>
 
     <!-- Category Filter -->
-    <div class="sticky top-[60px] z-20 flex justify-center category-filter gap-2 md:gap-4 bg-[#D3CFE2] px-2 md:px-4 py-2 overflow-x-auto whitespace-nowrap">
-        <div class="relative flex gap-2 md:gap-4">
+    <div class="sticky top-[50px] sm:top-[60px] z-20 flex justify-center bg-[#D3CFE2] px-2 sm:px-4 py-2 overflow-x-auto">
+        <div class="relative flex gap-2 sm:gap-4 min-w-max">
             <div id="active-indicator" class="absolute bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
-            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="index.html">Recent</button>
-            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="opinion.html">Opinion</button>
-            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="news.html">News</button>
-            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="entertainment.html">Entertainment</button>
-            <button class="category-btn rounded-full px-4 md:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300" data-page="lifestyle.html">Lifestyle</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="index.html">Recent</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="opinion.html">Opinion</button>
+            <button class="category-btn active rounded-full px-3 sm:px-6 py-2 text-black font-semibold relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="newsPraeco.html">News</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="entertainment.html">Entertainment</button>
+            <button class="category-btn rounded-full px-3 sm:px-6 py-2 text-black hover:text-gray-800 relative z-10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap" data-page="lifestyle.html">Lifestyle</button>
         </div>
     </div>
-    
-    <!-- Coming Soon Content -->
-    <div class="container mx-auto px-4 py-12">
-        <div class="flex flex-col items-center justify-center min-h-[60vh]">
-            <!-- Coming Soon Box -->
-            <div class="bg-white rounded-xl shadow-2xl border-8 border-[#8b7fd4] max-w-2xl w-full pulse-animation">
-                <!-- Top Purple Border -->
-                <div class="h-4 bg-[#8b7fd4]"></div>
-                
-                <!-- Content -->
-                <div class="p-8 md:p-12 flex flex-col items-center">
-                    <h1 class="source-serif text-4xl md:text-5xl font-bold text-center mb-6">Coming Soon</h1>
-                    <div class="w-24 h-1 bg-[#8b7fd4] mb-8"></div>
-                    <p class="playfair text-xl md:text-2xl text-center mb-8">We're working on exciting new articles for this section!</p>
-                    <p class="text-lg text-gray-600 text-center mb-6">Check back soon for fresh content.</p>
-                    
-                    <!-- Return Home Button -->
-                    <a href="index.html" class="mt-4 px-6 py-3 bg-[#8b7fd4] text-white rounded-full hover:bg-[#7b6fc4] transition-all duration-300 font-semibold">
-                        Return to Home
-                    </a>
-                </div>
-                
-                <!-- Bottom Accent -->
-                <div class="h-4 bg-[#8b7fd4]"></div>
+
+    <!-- Articles Grid - Responsive -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-4 px-4 sm:px-6 lg:px-8 pb-8">
+        <a href="syria_war.html" class="relative rounded-lg shadow-xl h-[300px] sm:h-[350px] lg:h-[400px] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="syrian_image.png" alt="Syrian War">
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-4 sm:p-6">
+                <p class="font-['Playfair_Display'] text-black text-xl sm:text-2xl lg:text-3xl mb-auto leading-tight">The Dirty War in Syria:<br> A Youth's Story</p>
+                <p class="font-['Playfair_Display'] text-black text-sm sm:text-base lg:text-lg mb-4">By: Yaseen Aswad</p>
             </div>
-        </div>
+        </a>
+
+        <a href="freedomatx.html" class="relative rounded-lg shadow-xl h-[300px] sm:h-[350px] lg:h-[400px] transition-transform duration-300 transform scale-100 hover:scale-105">
+            <img class="block h-full w-full object-cover rounded-lg opacity-40" src="palestine.jpeg" alt="UT Austin Protest">
+            <div class="absolute inset-0 flex flex-col justify-center h-full p-4 sm:p-6">
+                <p class="font-['Playfair_Display'] text-black text-xl sm:text-2xl lg:text-3xl mb-auto leading-tight">Ameer Qaddumi:<br> Violation of Freedom of Speech at the University of Texas</p>
+                <p class="font-['Playfair_Display'] text-black text-sm sm:text-base lg:text-lg mb-4">By: Hana Kazi</p>
+            </div>
+        </a>
     </div>
 
     <script>
         // Select all category buttons and the active indicator
         const buttons = document.querySelectorAll('.category-btn');
         const activeIndicator = document.getElementById('active-indicator');
-        
-        // Set active button based on current page URL
-        let currentPath = window.location.pathname;
-        let filename = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-        
-        let currentActiveButton;
-        buttons.forEach(button => {
-            if (button.getAttribute('data-page') === filename) {
-                button.classList.add('active');
-                currentActiveButton = button;
-            }
-        });
-        
-        // If no match found, default to first button
-        if (!currentActiveButton) {
-            currentActiveButton = buttons[2];
-            currentActiveButton.classList.add('active');
-        }
+        let currentActiveButton = buttons[2]; // Set to News button
 
         // Function to update the active indicator position
         function updateActiveIndicator(button) {
@@ -189,9 +94,7 @@
         }
 
         // Initialize the active indicator
-        document.addEventListener('DOMContentLoaded', function() {
-            updateActiveIndicator(currentActiveButton);
-        });
+        updateActiveIndicator(currentActiveButton);
 
         buttons.forEach(button => {
             button.addEventListener('click', function(e) {
@@ -219,4 +122,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
