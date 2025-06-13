@@ -29,21 +29,22 @@
     <link rel="icon" type="image/png" href="praecoLogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#eae6ff] min-h-screen">
-
     <!-- Navbar -->
-    <div class="sticky top-[-10px] z-30 bg-white shadow-md px-4 sm:px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center source-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-left">
-          <span class="hidden sm:inline">PRAECO</span>
-          <span class="sm:hidden">P</span>
-          <img src="praecoLogo.png" alt="Praeco Logo" class="ml-1 sm:ml-2 h-8 sm:h-10 md:h-14">
-        </a>
-
-        <div class="flex gap-3 sm:gap-6">
-            <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">About</a>
-            <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-sm sm:text-lg lg:text-xl">Contact</a>
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
+                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+            </div>
         </div>
     </div>
+
 
     <!-- Category Filter -->
     <div class="sticky top-[50px] sm:top-[60px] z-20 flex justify-center bg-[#D3CFE2] px-2 sm:px-4 py-2 overflow-x-auto">
