@@ -257,13 +257,17 @@
 
     <!-- Join Praeco Modal -->
     <div id="join-praeco-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
-        <div class="relative bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full transform transition-all duration-300 ease-in-out scale-95 opacity-0">
-            <button id="close-modal-btn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl font-bold leading-none p-2">&times;</button>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full transform transition-all duration-300 ease-in-out scale-95 opacity-0">
             <h2 class="source-serif text-3xl font-bold text-gray-800 mb-2">Want to Join Praeco?</h2>
             <p class="text-gray-600 mb-6">We are always looking for new members to join our team!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHhn9iRUVDwvKoc5t4ixKlgQavD-mOhVlNDPjGTvZTv6uclQ/viewform" target="_blank" class="inline-block bg-[#8b7fd4] hover:bg-[#7a6fb0] text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
-                Apply Now
-            </a>
+            <div class="flex justify-center gap-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHhn9iRUVDwvKoc5t4ixKlgQavD-mOhVlNDPjGTvZTv6uclQ/viewform" target="_blank" class="inline-block bg-[#8b7fd4] hover:bg-[#7a6fb0] text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
+                    Apply Now
+                </a>
+                <button id="close-modal-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
+                    Maybe Later
+                </button>
+            </div>
         </div>
     </div>
 
@@ -307,7 +311,7 @@
                 }, 300);
             };
 
-            setTimeout(showModal, 10); // Show modal almost instantly
+            setTimeout(showModal, 3000);
 
             closeModalBtn.addEventListener('click', hideModal);
 
