@@ -3,64 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tittle core</title>
+    <title>Adolescence and Red Pill Content</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #eae6ff;
+        }
+        .exo-2 { 
+            font-family: 'Exo 2', sans-serif; 
+        }
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
         body {
-            font-family: Times New Roman, serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0ff;
-            line-height: 1.5;
+            font-family: "Times New Roman", serif;
+            background-color: #eae6ff;
         }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
+        @media (max-width: 768px) {
+            .navbar-content {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-
-        .title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .content, .conclusion {
-            text-align: justify;
-            margin: 0 100px 20px 100px;
+        @media (max-width: 640px) {
+            .navbar-title {
+                font-size: 1.5rem;
+            }
+            .navbar-links {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="header">
-        <h1 class="title">Tittle core</h1>
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="font-sans font-poppins text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">About Us</a>
+                <a href="contact_us.html" class="font-sans font-poppins text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-xl">Contact Us</a>
+            </div>
+        </div>
     </div>
-
-    <div class="content">
-
-        <p>“Red pill content is hatred of women in the context of men who want nothing more than to please women, and who are living in a world with a sexual marketplace they find deeply anxiety-provoking.” - The Guardian.</p>
-
-        <p>The whole goal of red pill content is to make men feel like women “owe” them for everything, they feel like they are owed the world, leading to a lot of toxic masculinity ideals. Such examples of red pill ideologies are those of Roosh V and his notion that it should be legal to rape a woman on private property. Sites such as 4chan exist mainly to post thousands of revenge porn images without consent. This type of content feeds off of young and impressionable male minds that may be a victim of emotional neglect or bullying, lack of solid relationships, and physiological disorders.</p>
-
-        <p><em>Adolescence</em>, a British television psychological crime drama series created by Jack Thorne and Stephen Graham and directed by Philip Barantini. It follows the story of Jamie, a thirteen-year-old boy who is arrested by the police for the murder of his female classmate. His house is raided and everyone is very confused and shocked. He is interrogated and evaluated by many police officers and psychiatrists all trying to find out one thing, what really happened?</p>
-
-        <p>Jaime, a very impressionable adolescent boy is accused for the murder of his classmate Katie Leonard. Investigations at Jamie's school and interviews by a forensic psychologist uncover Jamie's views towards women associated with Red pill content. His views on women are exposed, which come to a shock to many. This show not only reflects the ideologies of red pill content on impressionable youth but how it can twist young children's minds, especially boys.</p>
-
-        <p>In the first episode, 13-year-old Jamie Miller is arrested at home for the murder of his classmate, Katie Leonard. At the police station, Jamie initially denies involvement. During interrogation, detectives reveal CCTV footage showing Jamie stabbing Katie. The episode highlights Jamie's exposure to misogynistic online content and his inappropriate comments on social media.</p>
-
-        <p>Then in the second episode, Detectives Bascombe and Frank visit Jamie's school to investigate the motive and locate the murder weapon. They learn that Katie had publicly labeled Jamie as an "incel" on Instagram, leading to cyberbullying. Jamie’s friend Ryan admits to providing the knife, believing Jamie intended only to intimidate Katie. Ryan is arrested for conspiracy to commit murder.</p>
-
-        <p>Seven months later in the third episode, forensic psychologist Briony Ariston interviews Jamie to assess his mental state. Jamie discusses his feelings of rejection and anger towards Katie, revealing his belief that she would accept his advances due to her vulnerability. His behavior oscillates between friendly and aggressive, culminating in disturbing confessions. The session ends with Jamie being forcibly removed after an outburst.</p>
-
-        <p>Finally in the last episode, thirteen months post-murder, Jamie's family grapples with the impending trial. On Eddie's 50th birthday, their van is vandalized with graffiti labeling Jamie as a "nonce.” Eddie confronts the vandals and later receives a call from Jamie, who decides to plead guilty. The family reflects on their failure to recognize Jamie's online radicalization, ending with Eddie expressing remorse in Jamie's room.</p>
-
-        <p>Red Pill content appeals to characters who are insecure, lonely, or struggling with rejection. The ideology is presented as offering false empowerment or control. Which is exactly what Jamie was facing. He was bullied and felt like he didn’t have any power, which is who the red pill content tries to target. He was influenced by many and felt like Katie owed it to him to go on a date with him. This show represents more than just a storyline, it discusses how these so-called “Alpha Male” content creators actually impacted the minds of the young and impressionable.</p>
-
-        <p>Another critique that this show has is the lack of parent involvement. Through the show Jaime’s parents are mourning and keep asking themselves how they allowed this to happen. It seems there is a lack of care with parents and the online world that their child is involved in. This lack of concern can lead to inappropriate content and more to infiltrate a child's mind. Red Pill thrives in silence and ignorance—when the emotional needs of young people go unmet.</p>
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold mb-4" style="font-family: 'Times New Roman', serif;">Adolescence and Red Pill Content</h1>
+        <div class="flex items-center gap-4 mb-4">
+            <a href="#" class="text-[#8B7FD4] hover:text-[#6B5EAF]" style="font-family: 'Times New Roman', serif;">Hana Kazi</a>
+            <span class="text-gray-600">June 21 2025</span>
+        </div>
+        <div class="mb-8">
+            <!-- Placeholder image for red pill content, replace src as needed -->
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Red pill content illustration" class="w-full h-[400px] object-cover rounded-lg shadow-lg">
+        </div>
+        <article class="prose prose-lg max-w-none">
+            <blockquote class="border-l-4 border-[#8B7FD4] pl-4 italic text-gray-700 mb-6">“Red pill content is hatred of women in the context of men who want nothing more than to please women, and who are living in a world with a sexual marketplace they find deeply anxiety-provoking.” - The Guardian.</blockquote>
+            <p class="text-lg leading-relaxed mb-6">
+                The goal of red pill content is to make men feel like women "owe" them for everything. They feel like they are entitled to the world, promoting toxic masculinity.  This includes examples of red pill ideologies such as those of Roosh V, and his notion that it should be legal to rape a woman on private property. This disgusting behavior isn't limited to obscure content creators; it exists on a huge scale. Sites such as 4chan (that boasts tens of millions of monthly visitors) exist mainly to post thousands of revenge porn images without consent. This type of content feeds off of young and impressionable male minds that may be victims of emotional neglect or bullying, lack of solid relationships, and physiological disorders. A lot of online content has been highlighting the issues of red pill content, trying to reverse and show the damage it has done.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                <strong>Adolescence</strong> is a British television psychological crime drama series that was created by Jack Thorne and Stephen Graham and directed by Philip Barantini. It follows the story of Jamie, a thirteen-year-old boy who is arrested by the police for the murder of his female classmate, Katie Leonard. His house is raided, and he's interrogated and evaluated by many police officers and psychiatrists, all trying to find out one thing: what really happened?
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                As investigations at Jamie's school and interviews by a forensic psychologist begin, the experts uncover Jamie's views towards women associated with Red pill content. These views are exposed, shocking those around him. This show not only reflects the ideologies of red pill content in impressionable youth,  but also how it can twist young children's minds, especially boys. 
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                At the police station, Jamie initially denies involvement.​ During interrogation, detectives reveal CCTV footage showing Jamie stabbing Katie.​ The first episode highlights Jamie's exposure to misogynistic online content and his inappropriate comments on social media. Jamie sees women as more of a property, and an example of this is when he comments "Why do you even bother speaking in class? You're just there to look pretty." He feels like women have no purpose, only to be controlled, so when Katie rejected him, his very fragile masculinity was shattered. It was shown he felt a lack of power, leading to him giving "payback" to Kaite. 
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Then, in the second episode, Detectives Bascombe and Frank visit Jamie's school to investigate his motive and locate the murder weapon.​ They learn that Katie had publicly labeled Jamie as an "incel" on Instagram, leading to cyberbullying. Cyberbullying is very prominent in our society today, the harmful impact of social media and online content can really alter one's mind and the way they perceive the world. Jamie comes up with a plan to kill Katie. Eventually,​ Jamie's friend Ryan admits to providing the knife, believing Jamie intended only to intimidate Katie, leading to Ryan's arrest for conspiracy to commit murder.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Seven months later in the third episode, forensic psychologist Briony Ariston interviews Jamie to assess his mental state.​ Jamie discusses his feelings of rejection and anger towards Katie, revealing his belief that she would accept his advances due to her vulnerability.​ His behavior oscillates between friendly and aggressive, culminating in disturbing confessions such as deriving satisfaction from being cruel, which reflects deeper psychological shifts. "When I made that comment online and everyone laughed, it felt... good. Like I had control." This shows a psychological shift from moving from being a passive consumer of toxic content to becoming an active participant. ​The session ends with Jamie being forcibly removed after an outburst.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Finally in the last episode, Thirteen months post-murder, Jamie's family grapples with the impending trial.​ On Eddie's 50th birthday (Jamie's father), their van is vandalized with graffiti labeling Jamie as a "nonce." Eddie confronts the vandals and later receives a call from Jamie, who decides to plead guilty.​ The family reflects on their failure to recognize Jamie's online radicalization, ending with Eddie expressing remorse in Jamie's room.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Red Pill content appeals to characters who are insecure, lonely, or struggling with rejection. The ideology is presented as offering false empowerment or control, which is exactly what Jamie was facing. He was bullied and felt like he didn't have any power, making him the target audience for Red Pill content. He was influenced by many, and felt like Katie owed it to him to go on a date with him. This influence was due to red pill content, and how it can impact a young and impressionable mind. This show represents more than just a storyline: it discusses how these so-called "Alpha Male" content creators actually impacted the minds of the young and impressionable, leading to males feeling like they always have to be the strongest, therefore, invalidating others feelings and emotions. This striving to be the biggest and strongest can lead to a sense of entitlement, which is exactly what we see in Jamie, when he felt entitled that Katie had to go on a date with him.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                Another critique that this show has is the lack of parent involvement. Throughout the show Jaime's parents are mourning and keep asking themselves how they allowed this to happen. It seems there is a disonconcern or lack of knowledge with parents and the online world that their child is involved in. This lack of knowledge leads to parents turning a blind eye on their child's online presence. With more ignorance and lack of parent involvement will continue to allow inappropriate content and more to infiltrate a child's mind. Red Pill thrives in silence and ignorance—when the emotional needs of young people go unmet.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                In conclusion, Adolescence shows an unsettling glimpse into how young and impressionable minds can be influenced and ultimately harmed by the toxic ideologies in red pill content. The series highlights the psychological implications and impacts of red pill content, and also brings attention to the emotional vulnerabilities that make people, specifically young children, susceptible to it. The creators of this show call on the viewers to reflect on the digital environments that children are in daily and stress the need to have emotional education, open communications, and responsible intervention by an adult. Adolescence is more than just a crime drama—it's a wake-up call for parents, educators, and society as a whole.
+            </p>
+        </article>
     </div>
-
-    <div class="conclusion">
-        <p>In conclusion, the TV show <em>Adolescence</em>, shows the unsettling glimpse into how young and impressionable minds can be influenced and ultimately harmed by toxic ideologies and red pill content. The series highlights the psychological implications and impacts of red pill content, it also brings attention to the emotional vulnerabilities that make people, specifically young children, susceptible to it. The creators of this show, call on the viewers to reflect on the digital environments that children are in daily and they stress the need to have emotional education, open communications and responsible intervention by an adult. <em>Adolescence</em> becomes more than just a crime drama—it becomes a wake-up call for parents, educators, and society at large.</p>
+    <!-- Back to Home -->
+    <div class="fixed bottom-8 right-8">
+        <a href="index.html" class="bg-[#8B7FD4] text-white px-6 py-3 rounded-full hover:bg-[#6B5EAF] transition-colors duration-300 shadow-lg">
+            Back to Home
+        </a>
     </div>
 </body>
 </html>
