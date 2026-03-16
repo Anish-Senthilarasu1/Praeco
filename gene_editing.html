@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gene Editing: Here's What We Know - The Praeco</title>
+    <link rel="icon" type="image/png" href="praecoLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #eae6ff;
+        }
+
+        .exo-2 {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .source-serif {
+            font-family: "Source Serif 4", serif;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #eae6ff;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-title {
+                font-size: 1.5rem;
+            }
+
+            .navbar-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#eae6ff] min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 z-30 bg-white shadow-md px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center navbar-content max-w-7xl mx-auto">
+            <h1 class="source-serif text-3xl md:text-5xl font-semibold text-left flex items-center navbar-title">
+                PRAECO
+                <img src="praecoLogo.png" alt="Praeco Logo" class="ml-2 h-10 md:h-14">
+            </h1>
+            <div class="flex gap-3 md:gap-6 navbar-links">
+                <a href="about_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">About Us</a>
+                <a href="contact_us.html" class="text-gray-700 hover:text-black transition-colors duration-300 font-semibold text-base md:text-xl">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold mb-4" style="font-family: 'Times New Roman', serif;">Gene Editing: Here's What We Know</h1>
+
+        <div class="flex items-center gap-4 mb-4">
+            <a href="#" class="text-[#8B7FD4] hover:text-[#6B5EAF]" style="font-family: 'Times New Roman', serif;">Rabia Ghanchi</a>
+            <span class="text-gray-600" style="font-family: 'Times New Roman', serif;">July 15th, 2025</span>
+        </div>
+
+        <div class="mb-8">
+            <img src="gene_edit.png" alt="Gene Editing" class="w-full h-[400px] object-cover rounded-lg shadow-lg">
+        </div>
+
+        <article class="prose prose-lg max-w-none" style="font-family: 'Times New Roman', serif;">
+            <p class="text-lg leading-relaxed mb-6">
+                CRISPR, first characterized by Francis Mojica at the University of Alicante in Spain, is a set of contrasting repeat sequences in DNA. The repeats were initially thought to be unrelated, and simply used to code for the organism's features and characteristics, but were later found by Mojica to match parts of genomes from bacteriophages. This led him to correctly hypothesize that CRISPR is an adaptive immune system. Mojica's discoveries were taken further by the development of CRISPR Cas9, a gene editing technique that was experimented with and further improved from 2005 until 2012. Finally, in January of 2013, Feng Zhang and his team at MIT were able to harness CRISPR Cas9 and adapt it to be able to edit genomes inside of eukaryotic cells. These developments set the precedent of future modifications to treatment, catalyzing patient-treatment customization as well as countless other unique benefits.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6">
+                The first successful use of CRISPR Cas9 was through CASGEVY (FDA approved in December 2023) in a patient diagnosed with sickle cell anemia. In order to treat it using CRISPR technology, doctors would remove bone marrow stem cells from the patient which were infected with the disease due to the genetic mutation, then utilize the polymerase chain reaction technique and gel electrophoresis (methods used to amplify DNA samples and sort them based on the sizes of their short tandem repeats), to remove the mutation in the DNA fragments and replace them with a new sequence. Finally, these cells would be placed back into the patient's body to stimulate the growth and multiplication of healthy red blood cells. This method is categorized as ex-vivo (or "outside a living body") because the DNA mutation is removed outside of the organism's body, necessitating the extra steps of cell removal and reinsertion.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6">
+                On May 16th, 2025, the life of a human baby was saved through in-vivo (or "inside a living body") CRISPR technology! For the first time in human history, rather than utilizing the time consuming process of cell removal, gene editing, and reinsertion, the CRISPR gene editing machinery was directly inserted into the body of a baby diagnosed with a life-threatening genetic mutation: a disease called carbamoyl phosphate synthetase 1 (or CSP1 deficiency) that turns any protein in the body into a poison, which would inevitably kill any organism with it. If an approach other than CRISPR was taken, a liver transplant would be necessary to even give the baby a fighting chance. However, the small livers needed for the baby are hard to come by, and the surgery itself would be incredibly invasive, potentially doing more harm than good in a baby so small and sick.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6">
+                The parents of the baby boy, named KJ, decided to make an incredibly brave and worthwhile decision, leading to the first successful procedure utilizing in-vivo CRISPR technology through personalized gene editing. The Children's Hospital of Philadelphia received KJ, and performed the life-saving treatment, liberating him from his lethal condition. The procedure, much less invasive or intensive than its ex vivo counterpart, showed little to no hostile symptoms towards the baby.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6">
+                The first of many born with similar ailments, KJ and his family have paved the way for many other babies who may be diagnosed with the same condition. In-vivo gene editing has transformed the ways in which gene editing has been used in human history, modifying it to be far more accessible (especially to weak babies who cannot undergo surgery for cell sample removals) and efficient for all patients undergoing the treatment. However, this is only the beginning of countless other ways of aiding babies and adults alike, modifying their genetics and healing them back to the best versions of themselves!
+            </p>
+
+            <!-- References -->
+            <div class="mt-10 pt-6 border-t border-gray-400">
+                <h2 class="text-xl font-bold mb-4" style="font-family: 'Times New Roman', serif;">References</h2>
+                <ul class="text-sm leading-relaxed space-y-3 text-gray-700">
+                    <li>Broad Institute. "CRISPR Timeline." <em>Broad Institute</em>, 7 Dec. 2018, www.broadinstitute.org/what-broad/areas-focus/project-spotlight/crispr-timeline. Accessed 15 July 2025.</li>
+                    <li>Children's Hospital of Philadelphia. "World's First Patient Treated with Personalized CRISPR Gene Editing Therapy at Children's Hospital of Philadelphia." <em>Chop.edu</em>, 15 May 2025, www.chop.edu/news/worlds-first-patient-treated-personalized-crispr-gene-editing-therapy-childrens-hospital. Accessed 15 July 2025.</li>
+                    <li>Gostimskaya, Irina. "CRISPR–Cas9: A History of Its Discovery and Ethical Considerations of Its Use in Genome Editing." <em>Biochemistry (Moscow)</em>, vol. 87, no. 8, 15 Aug. 2022, pp. 777–788, pmc.ncbi.nlm.nih.gov/articles/PMC9377665/, https://doi.org/10.1134/s0006297922080090. Accessed 15 July 2025.</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="fixed bottom-8 right-8">
+        <a href="index.html" class="bg-[#8B7FD4] text-white px-6 py-3 rounded-full hover:bg-[#6B5EAF] transition-colors duration-300 shadow-lg">
+            Back to Home
+        </a>
+    </div>
+</body>
+</html>
