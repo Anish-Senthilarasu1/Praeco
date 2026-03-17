@@ -255,22 +255,6 @@
         </div>
     </div>
 
-    <!-- Join Praeco Modal -->
-    <div id="join-praeco-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full transform transition-all duration-300 ease-in-out scale-95 opacity-0">
-            <h2 class="source-serif text-3xl font-bold text-gray-800 mb-2">Want to Join Praeco?</h2>
-            <p class="text-gray-600 mb-6">We are always looking for new members to join our team!</p>
-            <div class="flex justify-center gap-4">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHhn9iRUVDwvKoc5t4ixKlgQavD-mOhVlNDPjGTvZTv6uclQ/viewform" target="_blank" class="inline-block bg-[#8b7fd4] hover:bg-[#7a6fb0] text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
-                    Apply Now
-                </a>
-                <button id="close-modal-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
-                    Maybe Later
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script>
         // Select all category buttons and the active indicator
         const buttons = document.querySelectorAll('.category-btn');
@@ -292,34 +276,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateActiveIndicator(currentActiveButton);
 
-            // Modal Logic
-            const modal = document.getElementById('join-praeco-modal');
-            const modalContent = modal.querySelector('div');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-
-            const showModal = () => {
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    modalContent.classList.remove('scale-95', 'opacity-0');
-                }, 10);
-            };
-
-            const hideModal = () => {
-                modalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 300);
-            };
-
-            setTimeout(showModal, 3000);
-
-            closeModalBtn.addEventListener('click', hideModal);
-
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    hideModal();
-                }
-            });
         });
 
         buttons.forEach(button => {
