@@ -146,7 +146,7 @@
         </div>
     </div>
     
-    <div class="container mx-auto px-4 py-6">
+    <div id="articles-grid" class="container mx-auto px-4 py-6">
         <div class="flex flex-col xl:flex-row gap-8">
             <!-- Main Content -->
             <div class="flex-grow">
@@ -255,53 +255,6 @@
         </div>
     </div>
 
-    <script>
-        // Select all category buttons and the active indicator
-        const buttons = document.querySelectorAll('.category-btn');
-        const activeIndicator = document.getElementById('active-indicator');
-        let currentActiveButton = document.querySelector('.category-btn.active');
-
-        // Function to update the active indicator position
-        function updateActiveIndicator(button) {
-            const buttonRect = button.getBoundingClientRect();
-            const containerRect = button.parentElement.getBoundingClientRect();
-            
-            activeIndicator.style.width = `${buttonRect.width}px`;
-            activeIndicator.style.height = `${buttonRect.height}px`;
-            activeIndicator.style.left = `${buttonRect.left - containerRect.left}px`;
-            activeIndicator.style.top = `${buttonRect.top - containerRect.top}px`;
-        }
-
-        // Initialize the active indicator
-        document.addEventListener('DOMContentLoaded', function() {
-            updateActiveIndicator(currentActiveButton);
-
-        });
-
-        buttons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Update active button
-                currentActiveButton.classList.remove('active');
-                this.classList.add('active');
-                currentActiveButton = this;
-
-                // Animate the active indicator
-                updateActiveIndicator(this);
-
-                // Redirect to the page specified in data-page attribute
-                const page = this.getAttribute('data-page');
-                setTimeout(() => {
-                    window.location.href = page;
-                }, 300);
-            });
-        });
-
-        // Update indicator position on window resize
-        window.addEventListener('resize', () => {
-            updateActiveIndicator(currentActiveButton);
-        });
-    </script>
+    <script src="nav.js"></script>
 </body>
 </html>
